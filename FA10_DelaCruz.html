@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<style>
+		
+		</style>
+		<meta charset="utf-8">  
+		<title> FA10 </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+	<h1> Number Breakdown </h1>
+	<p id="comvalue"></p>
+	<p id="Breakdown"></p>
+		<script>
+		//declares variables
+			var a = Math.round(Math.random()*1000);
+			let b = a.toString();
+			let c = b.length;
+			
+		//Displays the values
+			randomfunction();
+			breakdownfunction();
+			
+		//Randomly generates number
+			function randomfunction(){
+				document.getElementById("comvalue").innerHTML = "Randomly generated number: " + a;
+			}
+			
+		//Breaksdown the numbers
+			function breakdownfunction(){
+				if(c == 2){
+					let x = b.charAt(0);
+					let y = b.charAt(1);
+
+					document.getElementById("Breakdown").innerHTML = "Breakdown: " + x + "0, " + y;
+					
+				}
+				else if(c == 3){
+					let x = b.charAt(0);
+					let y = b.charAt(1);
+					let z = b.charAt(2);
+					
+					document.getElementById("Breakdown").innerHTML = "Breakdown: " + x + "00, " + y + "0, " + z;
+				}
+				
+				else{
+					let x = b.charAt(0);
+					
+					document.getElementById("Breakdown").innerHTML = "Breakdown: " + x;
+				}
+			}
+		</script>
+  </body>
+</html>
