@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<style>
+		
+		</style>
+		<meta charset="utf-8">  
+		<title> FA10 </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+	<button onclick = "random()"> Generate a random number </button>
+	<h1> Number Breakdown </h1>
+	<p id="comvalue"></p>
+	<p id="Breakdown"></p>
+		<script>
+			function random(){
+				var a = Math.round(Math.random()*1000);
+				let b = a.toString();
+				let c = b.length;
+			
+				document.getElementById("comvalue").innerHTML = "Randomly generated number: " + a;
+				
+				if(c == 2){
+					let x = b.charAt(0);
+					let y = b.charAt(1);
+
+					document.getElementById("Breakdown").innerHTML = "Breakdown: 0, " + x + "0, " + y;
+					
+				}
+				else if(c == 3){
+					let x = b.charAt(0);
+					let y = b.charAt(1);
+					let z = b.charAt(2);
+					
+					document.getElementById("Breakdown").innerHTML = "Breakdown: " + x + "00, " + y + "0, " + z;
+				}
+				
+				else{
+					let x = b.charAt(0);
+					
+					document.getElementById("Breakdown").innerHTML = "Breakdown: 0, 0, " + x;
+				}
+			}
+		</script>
+  </body>
+</html>
